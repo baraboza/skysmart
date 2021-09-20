@@ -1,0 +1,283 @@
+.hero {
+	margin-top: 45px;
+
+	&__title-wrap {
+		position: relative;
+
+		&.--intersected {
+
+			.hero__sticker-1 {
+				animation: sticker 0.25s 0.5s forwards;
+			}
+
+			.hero__sticker-2 {
+				animation: sticker 0.25s 0.6s forwards;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 148px;
+		line-height: 148px;
+		letter-spacing: -4px;
+	}
+
+	&__sticker-1,
+	&__sticker-2 {
+		position: absolute;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		z-index: 1;
+		opacity: 0;
+	}
+
+	&__sticker-1 {
+		top: 196px;
+		left: 507px;
+		width: 252px;
+		height: 177px;
+		background-image: url('../img/hero-sticker-1.png');
+	}
+
+	&__sticker-2 {
+		top: 74px;
+		left: 577px;
+		width: 551px;
+		height: 260px;
+		background-image: url('../img/hero-sticker-2.png');
+	}
+
+	&__list-wrap {
+		margin-top: 122px;
+		position: relative;
+
+		&.--intersected {
+
+			.hero__arrow {
+				animation: heroArrow 0.5s linear forwards;
+			}
+		}
+	}
+
+	&__item-box {
+		display: block;
+		border-radius: 24px;
+		overflow: hidden;
+		padding: 24px 28px;
+		height: 368px;
+		position: relative;
+		transition: transform 0.3s;
+
+		&:hover {
+			@include media-breakpoint-up(xl) {
+				transform: scale(1.0326);
+			}
+		}
+
+		&--one {
+			background: #DBFFE9;
+			color: #00A665;
+
+			.hero__item-image {
+				top: 147px;
+				left: 38px;
+				width: 287px;
+			}
+		}
+
+		&--two {
+			background: #E4FBFF;
+			color: #0080C1;
+
+			.hero__item-image {
+				top: 86px;
+				left: -23px;
+				width: 415px;
+			}
+		}
+
+		&--three {
+			background: #FFF4C5;
+			color: #FF9E00;
+
+			.hero__item-image {
+				top: 89px;
+				left: -6px;
+				width: 382px;
+			}
+		}
+	}
+
+	&__item-image {
+		display: block;
+		position: absolute;
+		line-height: 0;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: -127px;
+		left: -144px;
+		width: 941px;
+		height: 683px;
+		background-image: url('../img/hero-arrow.png');
+		background-repeat: no-repeat;
+		pointer-events: none;
+		opacity: 0;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		@keyframes heroArrow {
+			0% {
+				opacity: 1;
+				width: 600px;
+				height: 0;
+			}
+
+			50% {
+				width: 600px;
+			}
+
+			80% {
+				height: 683px;
+			}
+
+			100% {
+				opacity: 1;
+				width: 941px;
+			}
+		}
+	}
+
+	&__free-intro-lesson {
+		width: 312px;
+		margin-top: 36px;
+		margin-left: auto;
+		margin-right: 28px;
+		color: #00C1FF;
+
+		a {
+			@include hover-opacity;
+		}
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.hero {
+		margin-top: 21px;
+
+		&__title {
+			font-size: 48px;
+			line-height: 48px;
+			letter-spacing: -0.3px;
+		}
+
+		&__sticker-1 {
+			top: 29px;
+			left: 203px;
+			width: 127px;
+			height: 89px;
+			background-image: url('../img/hero-sticker-mobile-1.png');
+		}
+
+		&__sticker-2 {
+			top: 71px;
+			left: 66px;
+			width: 275px;
+			height: 107px;
+			background-image: url('../img/hero-sticker-mobile-2.png');
+		}
+
+		&__list-wrap {
+			margin-top: 63px;
+
+			&.--intersected {
+
+				.hero__arrow {
+					animation: heroArrowMobile 0.3s 0.8s linear forwards;
+				}
+			}
+		}
+
+		&__item {
+
+			&:nth-child(n + 2) {
+				margin-top: 16px;
+			}
+		}
+
+		&__item-box {
+			border-radius: 20px;
+			padding: 16px 84px 26px 20px;
+			height: auto;
+			min-height: 132px;
+
+			&--one {
+
+				.hero__item-image {
+					width: 129px;
+					top: 1px;
+					right: -38px;
+					left: auto;
+				}
+			}
+
+			&--two {
+
+				.hero__item-image {
+					width: 194px;
+					top: -26px;
+					right: -77px;
+					left: auto;
+				}
+			}
+
+			&--three {
+
+				.hero__item-image {
+					width: 173px;
+					top: -22px;
+					right: -64px;
+					left: auto;
+				}
+			}
+		}
+
+		&__item-text {
+			max-width: 240px;
+		}
+
+		&__arrow {
+			top: auto;
+			bottom: -5px;
+			left: -17px;
+			width: 288px;
+			height: 132px;
+			background-image: url('../img/hero-arrow-mobile.png');
+			background-position: 0 100%;
+
+			@keyframes heroArrowMobile {
+				0% {
+					opacity: 1;
+					width: 0;
+				}
+
+				100% {
+					opacity: 1;
+					width: 288px;
+				}
+			}
+		}
+
+		&__free-intro-lesson {
+			margin-top: 21px;
+			margin-left: 20px;
+			margin-right: 0;
+			width: 240px;
+		}
+	}
+}

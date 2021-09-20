@@ -1,0 +1,11 @@
+.col, [class*=col-] {
+	padding-left: math.div($grid-gutter-width, 2);
+	padding-right: math.div($grid-gutter-width, 2);
+}
+
+@include media-breakpoint-down(xl) {
+	.container {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}

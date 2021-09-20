@@ -1,0 +1,4 @@
+@mixin col-width($col-width: 1, $row-width: 1) {
+	flex: 0 0 math.div(100% * $col-width, $row-width);
+	max-width: math.div(100% * $col-width, $row-width);
+}

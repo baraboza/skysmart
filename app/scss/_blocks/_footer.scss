@@ -1,0 +1,53 @@
+.footer {
+
+	&__container {
+		height: 101px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__copyright,
+	&__barrel {
+		margin-bottom: 3px;
+	}
+
+	&__copyright {
+		margin-left: 13px;
+		margin-right: auto;
+	}
+
+	&__barrel {
+		color: rgba(0, 0, 0, 0.48);
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.footer {
+
+		&__container {
+			height: auto;
+			padding-top: 32px;
+			padding-bottom: 32px;
+			flex-wrap: wrap;
+		}
+
+		&__logo {
+			width: 125px;
+			margin-bottom: -4px;
+		}
+
+		&__copyright,
+		&__barrel {
+			margin-bottom: 0;
+		}
+
+		&__copyright {
+			margin-left: 10px;
+		}
+
+		&__barrel {
+			margin-top: 18px;
+			flex-basis: 100%;
+		}
+	}
+}

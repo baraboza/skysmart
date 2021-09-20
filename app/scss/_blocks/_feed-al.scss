@@ -1,0 +1,196 @@
+.feed-al {
+	margin-top: 81px;
+
+	&__box {
+		height: 810px;
+		position: relative;
+
+		&.--intersected {
+
+			.feed-al__arrow {
+				animation: feedAlArrow 0.3s linear forwards;
+			}
+		}
+	}
+
+	&__person {
+		position: absolute;
+		top: 0;
+		right: 662px;
+		width: 634px;
+		height: 810px;
+	}
+
+	&__person-image {
+		display: block;
+		line-height: 0;
+	}
+
+	&__target {
+		position: absolute;
+		top: 319px;
+		right: 16px;
+		width: 248px;
+		height: 248px;
+	}
+
+	&__text {
+		width: 662px;
+		margin-left: auto;
+		padding-top: 55px;
+	}
+
+	&__arrow,
+	&__sticker-success {
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+
+	&__arrow {
+		bottom: 249px;
+		right: 380px - 144px;
+		width: 495px;
+		height: 236px;
+		background-image: url('../img/feed-al-arrow.png');
+		background-position: 100% 100%;
+		opacity: 0;
+
+		@keyframes feedAlArrow {
+			0% {
+				opacity: 1;
+				height: 85px;
+				width: 160px;
+			}
+
+			20% {
+				height: 165px;
+			}
+
+			45% {
+				width: 350px;
+			}
+
+			65% {
+				width: 410px;
+				height: 195px;
+			}
+
+			75% {
+				width: 460px;
+				height: 210px;
+			}
+
+			85% {
+				width: 490px;
+				height: 220px;
+			}
+
+			95% {
+				width: 495px;
+				height: 230px;
+			}
+
+			100% {
+				opacity: 1;
+				height: 236px;
+			}
+		}
+	}
+
+	&__pizza {
+		position: absolute;
+		top: 530px - 81px;
+		right: 242px - 144px;
+		cursor: pointer;
+		user-select: none;
+		line-height: 0;
+
+		img {
+			pointer-events: none;
+		}
+	}
+
+	&__sticker-success {
+		top: 296px;
+		right: 214px - 144px;
+		width: 616px;
+		height: 226px;
+		background-image: url('../img/feed-al-sticker-success.png');
+		opacity: 0;
+
+		&.--active {
+			animation: sticker 0.25s forwards;
+		}
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.feed-al {
+		margin-top: 98px;
+		margin-bottom: 34px;
+		overflow: hidden;
+
+		&__box {
+			height: 469px + 114px + 38px;
+
+			&.--intersected {
+
+				.feed-al__arrow {
+					animation: feedAlArrowMobile 0.3s linear forwards;
+				}
+			}
+		}
+
+		&__person {
+			width: 375px;
+			left: -16px;
+			right: auto;
+			top: 114px;
+		}
+
+		&__text {
+			max-width: 343px;
+			padding-top: 0;
+			margin-left: 0;
+		}
+
+		&__arrow {
+			top: 22px + 114px;
+			left: 11px;
+			right: auto;
+			bottom: auto;
+			width: 322px;
+			height: 298px;
+			background-image: url('../img/feed-al-arrow-mobile.png');
+			background-position: 0 0;
+			z-index: -1;
+
+			@keyframes feedAlArrowMobile {
+				0% {
+					opacity: 1;
+					width: 0;
+				}
+
+				100% {
+					opacity: 1;
+					height: 322px;
+				}
+			}
+		}
+
+		&__sticker-success {
+			top: 399px + 114px;
+			left: 45px - 16px;
+			width: 294px;
+			height: 108px;
+			background-size: 100%;
+		}
+
+		&__pizza {
+			top: 277px + 114px;
+			left: -27px;
+			right: auto;
+			width: 133px;
+		}
+	}
+}

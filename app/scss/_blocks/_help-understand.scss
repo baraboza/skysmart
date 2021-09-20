@@ -1,0 +1,141 @@
+.help-understand {
+	margin-top: 121px;
+
+	&__box {
+		height: 602px;
+		position: relative;
+
+		&.--intersected {
+
+			.help-understand__heart {
+				animation: helpUnderstandHeart 0.3s linear forwards;
+			}
+
+			.help-understand__sticker-1 {
+				animation: sticker 0.25s 0.2s forwards;
+			}
+
+			.help-understand__sticker-2 {
+				animation: sticker 0.25s 0.3s forwards;
+			}
+		}
+	}
+
+	&__text {
+		padding-top: 102px;
+		max-width: 620px;
+	}
+
+	&__heart,
+	&__sticker-1,
+	&__sticker-2 {
+		position: absolute;
+		background-repeat: no-repeat;
+		opacity: 0;
+	}
+
+	&__heart {
+		top: 0;
+		right: 177px - 144px;
+		width: 654px;
+		height: 602px;
+		background-image: url('../img/help-understand-heart.png');
+		background-position: 100% 0;
+
+		@keyframes helpUnderstandHeart {
+			0% {
+				opacity: 1;
+				width: 0;
+				height: 0;
+			}
+
+			80% {
+				height: 602px;
+			}
+
+			100% {
+				width: 654px;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__sticker-1 {
+		top: 329px;
+		right: -3px;
+		width: 375px;
+		height: 226px;
+		background-image: url('../img/help-understand-sticker-1.png');
+	}
+
+	&__sticker-2 {
+		top: 210px;
+		right: -36px;
+		width: 476px;
+		height: 189px;
+		background-image: url('../img/help-understand-sticker-2.png');
+	}
+}
+
+@include media-breakpoint-down(xl) {
+	.help-understand {
+		margin-top: 64px;
+		overflow: hidden;
+
+		&__box {
+			height: 129px + 359px;
+
+			&.--intersected {
+
+				.help-understand__heart {
+					animation: helpUnderstandHeartMobile 0.3s linear forwards;
+				}
+			}
+		}
+
+		&__text {
+			padding-top: 0;
+			max-width: 343px;
+		}
+
+		&__heart {
+			top: 129px;
+			left: 56px;
+			right: auto;
+			width: 394px;
+			height: 359px;
+			background-image: url('../img/help-understand-heart-mobile.png');
+			background-position: 0 0;
+
+			@keyframes helpUnderstandHeartMobile {
+				0% {
+					opacity: 1;
+					width: 0;
+					height: 0;
+				}
+
+				100% {
+					width: 394px;
+					height: 359px;
+					opacity: 1;
+				}
+			}
+		}
+
+		&__sticker-1 {
+			top: 119px + 190px;
+			left: 47px - 16px;
+			width: 176px;
+			height: 106px;
+			background-size: 100%;
+		}
+
+		&__sticker-2 {
+			top: 190px + 64px;
+			left: 0;
+			width: 222px;
+			height: 89px;
+			background-size: 100%;
+		}
+	}
+}

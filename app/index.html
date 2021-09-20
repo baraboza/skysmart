@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" type="image/png" href="img/favicon/favicon.png">
+	<meta name="theme-color" content="#000">
+	
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!--#set var="headerClass" value=" " -->
+	<!--#include virtual="/parts/header.html" -->
+
+	<main>
+
+		<section class="hero">
+			<div class="hero__container container">
+				<div class="hero__title-wrap" data-intersection-observer>
+					<p class="hero__title">Онлайн-школа Skysmart</p>
+					<div class="hero__sticker-1"></div>
+					<div class="hero__sticker-2"></div>
+				</div>
+
+				<div class="hero__list-wrap" data-intersection-observer>
+					<ul class="hero__list row">
+						<li class="hero__item col-xl-4">
+							<a href="#feed-al" class="hero__item-box hero__item-box--one" data-scroll-link>
+								<p class="hero__item-text txt-l">Подготовиться к школе и весело провести время</p>
+								<picture class="hero__item-image">
+									<img src="img/hero-item-1.png" alt="">
+								</picture>
+							</a>
+						</li>
+						<li class="hero__item col-xl-4">
+							<a href="#feed-al" class="hero__item-box hero__item-box--two" data-scroll-link>
+								<p class="hero__item-text txt-l">Понять сложный предмет и хорошо сдать экзамены</p>
+								<picture class="hero__item-image">
+									<img src="img/hero-item-2.png" alt="">
+								</picture>
+							</a>
+						</li>
+						<li class="hero__item col-xl-4">
+							<a href="#feed-al" class="hero__item-box hero__item-box--three" data-scroll-link>
+								<p class="hero__item-text txt-l">Найти классное хобби, которое пригодится в жизни</p>
+								<picture class="hero__item-image">
+									<img src="img/hero-item-3.png" alt="">
+								</picture>
+							</a>
+						</li>
+					</ul>
+
+					<div class="hero__arrow"></div>
+					<p class="hero__free-intro-lesson txt-l">
+						<a href="#feed-al" data-scroll-link>Бесплатный вводный урок</a>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="videos">
+			<div class="videos__container container">
+				<p class="videos__title h2">Как проходят занятия</p>
+				<ul class="videos__tabs-list txt-l">
+					<li class="videos__tabs-item">
+						<a href="video/Вводный урок.mp4" class="videos__tab --active">Вводный урок</a>
+					</li>
+					<li class="videos__tabs-item">
+						<a href="video/Английский язык.mp4" class="videos__tab">Английский язык</a>
+					</li>
+					<li class="videos__tabs-item">
+						<a href="video/Математика.mp4" class="videos__tab">Математика</a>
+					</li>
+				</ul>
+
+				<div class="videos__box" data-intersection-observer>
+					<video playsinline loop muted>
+						<source src="video/Вводный урок.mp4" type="video/mp4">
+					</video>
+
+					<button type="button" class="videos__sound-toggle">
+						<img class="videos__sound-icon-on" src="img/sound-on.svg" alt="">
+						<img class="videos__sound-icon-off" src="img/sound-off.svg" alt="">
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="help-understand">
+			<div class="help-understand__container container">
+				<div class="help-understand__box" data-intersection-observer>
+					<p class="help-understand__text h2">Поможем понять, что делает ребенка счастливым, и будем применять это в обучении</p>
+					<div class="help-understand__heart-wrap">
+						<div class="help-understand__heart"></div>
+						<div class="help-understand__sticker-1"></div>
+						<div class="help-understand__sticker-2"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="feed-al" class="feed-al">
+			<div class="feed-al__container container">
+				<div class="feed-al__box" data-intersection-observer>
+					<div class="feed-al__person">
+						<picture class="feed-al__person-image">
+							<source srcset="img/feed-al-person-mobile.png" media="(max-width: 1199.98px)">
+							<img src="img/feed-al-person.png" alt="">
+						</picture>
+						<div class="feed-al__target"></div>
+					</div>
+
+					<p class="feed-al__text h2">Чтобы записаться на вводный урок, покормите Эла</p>
+					<div class="feed-al__arrow"></div>
+					<div class="feed-al__sticker-success"></div>
+					<div class="feed-al__pizza">
+						<img src="img/feed-al-pizza.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+
+	<!--#include virtual="/parts/footer.html" -->
+
+	<!--#include virtual="/parts/svg.html" -->
+
+	<script src="js/app.min.js"></script>
+</body>
+</html>

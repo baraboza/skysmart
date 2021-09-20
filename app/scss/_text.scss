@@ -1,0 +1,40 @@
+.h2 {
+	font-size: 64px;
+	line-height: 70px;
+	letter-spacing: -0.4px;
+}
+
+.txt-l {
+	font-size: 32px;
+	line-height: 38px;
+	letter-spacing: -0.1px;
+}
+
+.txt-m {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.txt-s {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+@include media-breakpoint-down(xl) {
+	.h2 {
+		font-size: 32px;
+		line-height: 38px;
+		letter-spacing: -0.1px;
+	}
+
+	.txt-l {
+		font-size: 24px;
+		line-height: 30px;
+		letter-spacing: 0;
+	}
+
+	.txt-m {
+		font-size: 20px;
+		line-height: 26px;
+	}
+}

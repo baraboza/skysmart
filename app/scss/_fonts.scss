@@ -1,0 +1,33 @@
+@import "_mixins/font-face";
+
+@font-face {
+	font-family: StratosSkyeng;
+	src:
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-light.woff2) format("woff2"),
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-light.woff) format("woff");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: StratosSkyeng;
+	src:
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-regular.woff2) format("woff2"),
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-regular.woff) format("woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: StratosSkyeng;
+	src:
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-medium.woff2) format("woff2"),
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-medium.woff) format("woff");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: StratosSkyeng;
+	src:
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-bold.woff2) format("woff2"),
+		url(https://user53347.clients-cdnnow.ru/assets/fonts/stratos/stratosskyengweb-bold.woff) format("woff");
+	font-weight: 700;
+}

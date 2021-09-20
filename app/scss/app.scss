@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+@import "vars";
+@import "reset";
+@import "libs";
+@import "mixins";
+@import "fonts";
+@import "common";
+@import "text";
+@import "grid";
+@import "svg";
+@import "keyframes";
+
+// "мелкие" блоки (могут миксоваться с элементами других блоков, поэтому должны идти раньше для возможности переопределения их стилей)
+
+
+// "крупные" блоки
+@import "_blocks/header";
+@import "_blocks/hero";
+@import "_blocks/videos";
+@import "_blocks/help-understand";
+@import "_blocks/feed-al";
+@import "_blocks/footer";

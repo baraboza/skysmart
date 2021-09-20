@@ -1,0 +1,101 @@
+html {
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-width: 375px;
+	position: relative;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	font-family: StratosSkyeng, sans-serif;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+}
+
+main {
+	margin-bottom: auto;
+}
+
+img, 
+svg,
+iframe,
+video {
+	max-width: 100%;
+}
+
+input {
+	text-overflow: ellipsis;
+}
+
+input, 
+textarea, 
+button {
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	appearance: none;
+	color: #000;
+}
+
+input, 
+textarea {
+
+	&::placeholder {
+		color: #949494;
+	}
+
+	&:focus {
+
+		outline: none;
+	}
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+b, 
+strong {
+	font-weight: 700;
+}
+
+i, 
+em {
+	font-style: italic;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
