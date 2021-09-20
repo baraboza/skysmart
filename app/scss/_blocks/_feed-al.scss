@@ -11,6 +11,17 @@
 				animation: feedAlArrow 0.3s linear forwards;
 			}
 		}
+
+		&.--drag-success {
+
+			.feed-al__arrow {
+				display: none;
+			}
+
+			.feed-al__sticker-success {
+				animation: sticker 0.25s forwards;
+			}
+		}
 	}
 
 	&__person {
@@ -97,10 +108,15 @@
 		}
 	}
 
-	&__pizza {
+	&__pizza-wrap {
 		position: absolute;
 		top: 530px - 81px;
-		right: 242px - 144px;
+		left: 950px - 144px;
+		width: 248px;
+	}
+
+	&__pizza {
+		width: 248px;
 		cursor: pointer;
 		user-select: none;
 		line-height: 0;
@@ -117,10 +133,6 @@
 		height: 226px;
 		background-image: url('../img/feed-al-sticker-success.png');
 		opacity: 0;
-
-		&.--active {
-			animation: sticker 0.25s forwards;
-		}
 	}
 }
 
@@ -146,6 +158,13 @@
 			left: -16px;
 			right: auto;
 			top: 114px;
+		}
+
+		&__target {
+			top: 190px;
+			left: 227px;
+			width: 133px;
+			height: 133px;
 		}
 
 		&__text {
@@ -186,10 +205,13 @@
 			background-size: 100%;
 		}
 
-		&__pizza {
+		&__pizza-wrap {
 			top: 277px + 114px;
 			left: -27px;
-			right: auto;
+			width: 133px;
+		}
+
+		&__pizza {
 			width: 133px;
 		}
 	}
